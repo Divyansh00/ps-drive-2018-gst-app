@@ -11,7 +11,7 @@ app.use(bodyParser.json());
 var config = {
     host: 'db.imad.hasura-app.io',
     port: '5432',
-    user: 'divyanshchowdhary2016',
+    user: 'username',
     database: 'divyanshchowdhary2016',
     password: 'password'
 }
