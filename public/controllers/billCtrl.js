@@ -11,10 +11,9 @@ myApp.controller('billCtrl', ['$scope', '$http', function($scope, $http) {
     }
 
     $scope.total = function() {
-        console.log($scope.model[0].qty);
         var total = 0;
         angular.forEach($scope.billing, function(product) {
-            total += (product.price + (product.price * product.gst / 100)) * $scope.model.qty;
+            total += product.total;
         })
         console.log(total);
         return total;
