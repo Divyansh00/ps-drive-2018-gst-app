@@ -29,8 +29,8 @@
                     <td>{{product.name}}</td>
                     <td>{{product.price}}</td>
                     <td>{{product.gst}}</td>
-                    <td><input type="number" ng-model="model[$index].qty" ng-required class="form-control"></td>
-                    <td>{{(product.price+(product.gst*product.price/100)) * model[$index].qty }}</td>
+                    <td><input type="number" ng-model="model[$index].qty" ng-required class="form-control" ng-change="product.total = model[$index].qty?(product.price+(product.gst*product.price/100)) * model[$index].qty:0" ng-init="product.total = model[$index].qty?(product.price+(product.gst*product.price/100)) * model[$index].qty:0"></td>
+                    <td>{{product.total}}</td>
                 </tr>
                 <tr>
                     <td colspan="5" style="text-align:right">Gross Total</td>
